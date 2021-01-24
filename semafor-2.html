@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<style>
+
+.circle { 
+	width: 100px; 
+	height: 100px; 
+	background-color: grey;
+	-moz-border-radius: 50px; 
+	-webkit-border-radius: 50px; 
+	border-radius: 50px; 
+	margin: 10px auto 10px auto;
+}
+
+.red-active { 
+	background-color: red;
+}
+
+.yellow-active { 
+	background-color: yellow;
+}
+
+.green-active { 
+	background-color: green;
+}
+
+#tl-body {
+	background-color: black;
+	width: 150px;
+	padding: 20px 0px 20px 0px;
+	border-radius: 20px;
+	margin: auto;
+}
+
+</style>
+
+<script type="text/javascript">
+
+</script>
+
+</head>
+<body>
+	<div id="container">
+
+		<div id="tl-body">
+			<div id="red" class="circle"></div>
+			<div id="yellow" class="circle"></div>
+			<div id="green" class="circle"></div>
+		</div>
+
+		<div id="btns">
+			<button type="button"
+			onclick="redLight()">
+			Červená - on/off</button>
+
+			<button type="button"
+			onclick="yellowLight()">
+			Žlutá - on/off</button>
+
+			<button type="button"
+			onclick="greenLight()">
+			Zelená - on/off</button>
+		</div>
+
+	</div> <!-- end of container -->
+
+	<script>
+		function redLight() {
+		var element = document.getElementById("red");
+		element.classList.toggle("red-active");
+		}
+		function yellowLight() {
+		var element = document.getElementById("yellow");
+		element.classList.toggle("yellow-active");
+		}
+		function greenLight() {
+		var element = document.getElementById("green");
+		element.classList.toggle("green-active");
+		}
+	</script>
+</body>
+</html>
